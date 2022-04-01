@@ -7,35 +7,21 @@
 # Author: Brid Kennedy
 
 #refernce https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff
-
+# user:stvensonmt on https://stackoverflow.com/questions/33508034/making-a-collatz-program-automate-the-boring-stuff
 import sys
-# define collatz
+# define collatz function
+
 def collatz(number):
-    if number % 2 == 0:  #if the number is even
-     result = number // 2  #divide the number by 2
-     print (result)
 
-    elif number % 2 == 1: #if the number is odd
-        result = number * 3 + 1 #multiply by 3 and add 1
-        print (result)
+    if number % 2 == 0:  #if the number is divisable by 2 return that number and loop through with the resulting number
+        print(number // 2)
+        return number // 2
 
-    while result == 1: #when the number reaches 1 exit the loop 
-        sys.exit
-
-    while result != 1: #if the result is not 1 enter the defined collatz loop
-        number = result
-        collatz(number)
-
-print ('Enter a positive integer')
-
-try:
-    number = int(input())
-    collatz(number)
-
-except ValueError:
-    print('Please enter a valid integer')
-            
-
-    
-
-
+    elif number % 2 == 1: #if the number is not divisable by 2
+        result = 3 * number + 1 #multiply the number by 3 and add 1 and loop through that resulting number
+        print(result)
+        return result
+#programs starts below with input request
+n = input("Please enter a positive integer: ")
+while n != 1: #if the input does not equal one
+    n = collatz(int(n)) #put the number through the defined collatz function until the function returns a value of 1
