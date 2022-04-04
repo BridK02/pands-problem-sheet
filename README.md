@@ -68,7 +68,7 @@ To find a square root of a using Newton's Method, we can write:
 f(x)=x<sup>2</sup>−a
 This is because the roots would be:
 
-f(x)=x<sup>2</sup>−a=0⟹x<sup>2</sup>=a⟹x=± a−−√
+f(x)=x<sup>2</sup>−a=0⟹x<sup>2</sup>=a⟹x=± √a
 Apply Newton's iteration:
 https://math.stackexchange.com/a/721267
 
