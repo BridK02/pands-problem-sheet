@@ -58,9 +58,19 @@ Write a program that takes a positive floating-point number as input and outputs
 
 You should create a function called <tt>sqrt</tt> that does this.
 
-I am asking you to create your own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x).
+We are asked to create our own sqrt function and not to use the built in functions x ** .5 or math.sqrt(x).
 
-This is to demonstrate that you can research and code a process (If you really needed the square root you would use one of the above methods).
+To demonstrate that you can research and code a process.
+
+From https://math.stackexchange.com/questions/721258/newtons-method-for-estimating-square-roots
+To find a square root of a using Newton's Method, we can write:
+
+f(x)=x<sup>2</sup>−a
+This is because the roots would be:
+
+f(x)=x<sup>2</sup>−a=0⟹x<sup>2</sup>=a⟹x=± √a
+Apply Newton's iteration:
+https://math.stackexchange.com/a/721267
 
 $ python squareroot.py
 Please enter a positive number: 14.5
