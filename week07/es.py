@@ -6,7 +6,8 @@
 #https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-7.php
 # https://www.computerhope.com/issues/ch001721.htm
 #mobydick text saved from https://gist.githubusercontent.com/StevenClontz/4445774/raw/1722a289b665d940495645a5eaaad4da8e3ad4c7/mobydick.txt
-
+#arguments are also called operands or parameters in the POSIX standards. The arguments represent the 
+# source or the destination of the data that the command acts on.
 
 
 #open file in read mode
@@ -38,4 +39,4 @@ def letterFrequency(fileName, letter):
 
 #call function and display the letter count
 print(letterFrequency("mobydick.txt","e"))
-
+print(letterFrequency("mobydick.txt","E"))
