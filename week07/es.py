@@ -9,34 +9,17 @@
 #arguments are also called operands or parameters in the POSIX standards. The arguments represent the 
 # source or the destination of the data that the command acts on.
 
-
-#open file in read mode
-from cmath import e
-from itertools import count
-from sympy import E
-
-def letterFrequency(fileName, letter):
-#open file in read mode
-    file = open(fileName, "r")
-
-#read the content of file
-    data = file.read()
-
-#declare count variable
-    count=0
-
-#iterate through each character
-    for char in data:
-
-    #compare each character with "e"
-        if char == letter:
-            count += 1
-
-
-
-#return letter count
-    return count
-
-#call function and display the letter count
-print(letterFrequency("mobydick.txt","e"))
-print(letterFrequency("mobydick.txt","E"))
+filename = "mobydick.txt" #filename in command line
+l=input("Enter letter to be searched:") 
+e = 0 #starting count for letter e
+#open file in read mode, the with function takes care of closing the file
+#even if an error occurs
+with open(filename, "rt") as f: #read text
+    for line in f: #a for loop to read each line in the file
+        line = line.lower() #convert all letters to lower case
+        words = line.split() #split the lines into words
+        for i in words: #another for loop to work through the words list
+            for letter in i: #and a for loop to work through the letters in the words
+                if (letter == l): #if the user inputted letter is detected it is added to the e count
+                    e = e+1
+print ("The text of MobyDick has {} e's".format(e))
